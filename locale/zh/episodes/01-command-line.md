@@ -1,57 +1,44 @@
 ---
-title: First session with GAP
+title: 与GAP的第一次会话
 teaching: 30
 exercises: 10
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Time-saving tips and tricks
-- Using GAP's help system
-- Basic objects and constructions in the GAP language
+- 节省时间的技巧和方法
+- 使用 GAP的帮助系统
+- GAP语言中的基本对象和构造
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- Working with the GAP command line
+- 使用 GAP 命令行
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-If GAP is installed correctly you should be able to start it. Exactly how
-you start GAP will depend on your operating system and how you installed
-GAP. GAP starts with the _banner_ displaying information about the version of
-the system and loaded components, and then displays the command line prompt
-`gap>`, for example:
+如果正确安装 GAP ，您应该能够启动它。 准确地说，
+您如何启动 GAP 将取决于您的操作系统以及您如何安装
+GAP。 GAP始于显示系统版本的
+和加载组件信息的 \*banner \*，然后显示命令行提示
+`gap>`, 例如：
 
 ```output
- ┌───────┐   GAP 4.9.2 of 04-Jul-2018
- │  GAP  │   https://www.gap-system.org
- └───────┘   Architecture: x86_64-apple-darwin16.7.0-default64
- Configuration:  gmp 6.1.2, readline
- Loading the library and packages ...
- Packages:   AClib 1.3, Alnuth 3.1.0, AtlasRep 1.5.1, AutPGrp 1.9,
-             Browse 1.8.8, CRISP 1.4.4, Cryst 4.1.17, CrystCat 1.1.8,
-             CTblLib 1.2.2, FactInt 1.6.2, FGA 1.4.0, GAPDoc 1.6.1, IO 4.5.1,
-             IRREDSOL 1.4, LAGUNA 3.9.0, Polenta 1.3.8, Polycyclic 2.14,
-             PrimGrp 3.3.1, RadiRoot 2.8, ResClasses 4.7.1, SmallGrp 1.3,
-             Sophus 1.24, SpinSym 1.5, TomLib 1.2.6, TransGrp 2.0.2,
-             utils 0.54
- Try '??help' for help. See also '?copyright', '?cite' and '?authors'
-gap>
+
 ```
 
-To leave GAP, type `quit;` at the GAP prompt. Remember that all GAP commands,
-including this one, must be finished with a semicolon! Practice entering
-`quit;` to leave GAP, and then starting a new GAP session. Before continuing, you
-may wish to enter the following command to display GAP prompts and user inputs
-in different colours:
+要离开GAP，请在GAP提示符中输入 `quit;` 。 请记住，所有 GAP 命令，
+包括这个命令，必须用分号完成！ 练习进入
+`quit;` 离开GAP，然后开始新的GAP会话。 在继续之前，您
+可能希望输入以下命令，以不同颜色显示 GAP 提示和用户输入
+：
 
 ```gap
- ColorPrompt(true);
+
 ```
 
-The easiest way to start trying GAP out is as a calculator:
+开始尝试GAP的最简单方式是作为一个计算器：
 
 ```gap
 ( 1 + 2^32 ) / (1 - 2*3*107 );
